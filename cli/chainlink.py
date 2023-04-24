@@ -107,7 +107,7 @@ class ChainLink:
 
             # FIXME: I can't seem to set the namespace in objects like
             # deployment, so I'm creating it here...
-            if "namespace" not in k8s_object["metadata"]:
+            if "namespace" not in k8s_object["metadata"] and kind != "namespace":
                 k8s_object["metadata"]["namespace"] = self.namespace
                 yaml_str = yaml.dump(k8s_object)
 
