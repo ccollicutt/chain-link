@@ -1,0 +1,6 @@
+__pycache__
+.venv
+.vscode
+chain-link-cli.conf
+chain-link-manifests
+NOTES.md
