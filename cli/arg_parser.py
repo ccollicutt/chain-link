@@ -18,11 +18,15 @@ def create_parser():
     )
     subparsers = parser.add_subparsers(dest="command")
     subparsers.add_parser("deploy", help="Deploy chain-link to Kubernetes")
-    subparsers.add_parser("validate", help="Validate chain-link configuration")
-    generate_parser = subparsers.add_parser(
-        "generate", help="Generate chain-link kubernetes yaml"
+    subparsers.add_parser(
+        "validate", help="Validate chain-link configuration and deployment"
     )
-    subparsers.add_parser("dry-run", help="Generate chain-link kubernetes yaml")
+    generate_parser = subparsers.add_parser(
+        "generate", help="Generate chain-link kubernetes yaml only"
+    )
+    subparsers.add_parser(
+        "dry-run", help="Dry run the chain-link deployment to Kubernetes"
+    )
 
     generate_parser.add_argument(
         "--output-directory",
@@ -69,7 +73,7 @@ def create_parser():
     parser.add_argument(
         "-d",
         "--info",
-        help="Print lots of infoging statements",
+        help="Print lots of logging statements",
         action="store_const",
         dest="loglevel",
         const="DEBUG",

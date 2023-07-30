@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-ChainLink CLI - Deploy and validate the chain-link application in to a Kubernetes cluster
+ChainLink CLI - Deploy and validate the chain-link application in to a 
+Kubernetes cluster
 """
 
 from cli.cli_manager import run_cli
