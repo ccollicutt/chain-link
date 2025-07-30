@@ -1,5 +1,5 @@
 # Dockerfile
-FROM python:3.11-slim
+FROM python:3.14.0rc1-slim
 COPY requirements.txt /
 RUN set -ex && \
     pip install -r requirements.txt
