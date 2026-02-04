@@ -38,7 +38,7 @@ opentelemetry-util-http==0.38b0
 packaging==23.0
 pathspec==0.11.1
 platformdirs==3.2.0
-protobuf==3.20.3
+protobuf==6.33.5
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
 python-dateutil==2.8.2
